@@ -1,20 +1,11 @@
-#pragma comment(lib, "mono-2.0-sgen.lib")
-
-#include <mono/jit/jit.h>
-#include <mono/metadata/assembly.h>
-#include <mono/metadata/debug-helpers.h>
-#include <vector>
-#include <string>
-#include <iostream>
-
-#define ASSEMBLY_DLL_FILENAME ("GameAssembly.dll")
+#include "Utils.h"
+#include "CLog.h"
 
 struct ManagedBehaviour
 {
     MonoObject* instance;
     MonoMethod* startMethod;
     MonoMethod* updateMethod;
-    bool startCalled = false;
 };
 
 std::vector<ManagedBehaviour> behaviours;
@@ -43,7 +34,7 @@ void AddBehaviour(MonoObject* obj)
     MonoMethod* start = mono_class_get_method_from_name(classInst, "Start", 0);
     MonoMethod* update = mono_class_get_method_from_name(classInst, "Update", 0);
 
-    behaviours.push_back({ obj, start, update, false });
+    behaviours.push_back({ obj, start, update });
 }
 
 void GameRun()
@@ -67,6 +58,7 @@ int main()
 {
     mono_set_dirs("../ThirdParty/lib", "../ThirdParty/lib");
     domain = mono_jit_init("MyDomain");
+    RegisterInternalCalls("GameAssembly", "CLog");
 
     char tr_nspace[0x100] = {};
     char tr_class[0x100] = {};

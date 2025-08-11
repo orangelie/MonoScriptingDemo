@@ -4,3 +4,9 @@ D:\Project\C#Project\MonoScriptingTest1\GameAssembly\obj\Debug\GameAssembly.cspr
 D:\Project\C#Project\MonoScriptingTest1\GameAssembly\obj\Debug\GameAssembly.csproj.CoreCompileInputs.cache
 D:\Project\C#Project\MonoScriptingTest1\GameAssembly\obj\Debug\GameAssembly.dll
 D:\Project\C#Project\MonoScriptingTest1\GameAssembly\obj\Debug\GameAssembly.pdb
+C:\Users\Sang Wo Park\Desktop\Github\MonoScriptingDemo\GameAssembly\bin\Debug\GameAssembly.dll
+C:\Users\Sang Wo Park\Desktop\Github\MonoScriptingDemo\GameAssembly\bin\Debug\GameAssembly.pdb
+C:\Users\Sang Wo Park\Desktop\Github\MonoScriptingDemo\GameAssembly\obj\Debug\GameAssembly.csproj.AssemblyReference.cache
+C:\Users\Sang Wo Park\Desktop\Github\MonoScriptingDemo\GameAssembly\obj\Debug\GameAssembly.csproj.CoreCompileInputs.cache
+C:\Users\Sang Wo Park\Desktop\Github\MonoScriptingDemo\GameAssembly\obj\Debug\GameAssembly.dll
+C:\Users\Sang Wo Park\Desktop\Github\MonoScriptingDemo\GameAssembly\obj\Debug\GameAssembly.pdb
