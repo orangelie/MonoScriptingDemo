@@ -63,22 +63,6 @@ void GameRun()
     }
 }
 
-void GameLoop()
-{
-    for (auto& b : behaviours)
-    {
-        if (!b.startCalled && b.startMethod)
-        {
-            
-            b.startCalled = true;
-        }
-        if (b.updateMethod)
-        {
-            mono_runtime_invoke(b.updateMethod, b.instance, nullptr, nullptr);
-        }
-    }
-}
-
 int main()
 {
     mono_set_dirs("../ThirdParty/lib", "../ThirdParty/lib");
