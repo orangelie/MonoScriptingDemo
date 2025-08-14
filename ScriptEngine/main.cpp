@@ -86,16 +86,16 @@ int main()
                 const char* nspace = mono_metadata_string_heap(image, cols[MONO_TYPEDEF_NAMESPACE]);
 
                 // 클래스 로드
-                MonoClass* klass = mono_class_from_name(image, nspace, name);
+                MonoClass* classInst = mono_class_from_name(image, nspace, name);
 
                 // MonoBehaviour 상속 여부 체크
-                MonoClass* parent = mono_class_get_parent(klass);
+                MonoClass* parent = mono_class_get_parent(classInst);
                 while (parent)
                 {
                     const char* pname = mono_class_get_name(parent);
                     if (strcmp(pname, "MonoBehaviour") == 0)
                     {
-                        printf("Found MonoBehaviour: %s::%s\n", nspace, name);
+                        printf("Found MonoBehaviour: %s.%s\n", nspace, name);
                         strcpy_s(tr_nspace, nspace);
                         strcpy_s(tr_class, name);
                         break;
